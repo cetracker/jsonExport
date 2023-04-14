@@ -1,0 +1,21 @@
+Configutation:
+  status: warn
+
+  Appenders:
+    Console:
+      name: CONSOLE
+      target: SYSTEM_OUT
+      PatternLayout:
+        Pattern: "%m%n"
+
+  Loggers:
+      Root:
+        level: warn
+        AppenderRef:
+          - ref: CONSOLE
+      Logger:
+        - name: org.tour
+          additivity: false
+          level: debug
+          AppenderRef:
+            - ref: CONSOLE
